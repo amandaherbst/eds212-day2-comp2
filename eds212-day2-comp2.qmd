@@ -30,3 +30,18 @@ dfdy = D(fxyz, 'y')
 
 dfdy
 ```
+
+## Penguins plot
+
+```{r}
+# aes is for mapping variables onto chart aesthetics (ex. coloring by species)
+ggplot() +
+  geom_point(data = penguins, 
+       aes(x = flipper_length_mm, 
+           y = body_mass_g,
+           color = species)) + 
+  labs(x = "Flipper Length (mm)", 
+                      y = "Body Mass (g)", 
+                      title = "Palmer penguins body dimensions") +
+  theme_minimal()
+```
